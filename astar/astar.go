@@ -220,7 +220,7 @@ type PathPoint struct {
 // Manhattan distance NOT euclidean distance because in our routing we cant go diagonally between the points.
 // Attempting to add Diagonal distance.
 func (p Point) Dist(other Point) int {
-	da := 1
+	da := float64(1)
 	db := math.Sqrt(2)
 	dx := math.Abs(float64(p.Row) - float64(other.Row))
 	dy := math.Abs(float64(p.Col) - float64(other.Col))
