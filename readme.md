@@ -2,9 +2,9 @@
 
 golang A-star library with plug-able weight and targeting.
 
-go get: `go get github.com/nickdavies/go-astar/astar`
+go get: `go get github.com/threadsoftware/go-astar/astar`
 
-Godoc: http://godoc.org/github.com/nickdavies/go-astar/astar
+Godoc: http://godoc.org/github.com/threadsoftware/go-astar/astar
 
 ### Simple Routing ###
 
@@ -15,7 +15,7 @@ package main
 
 import "fmt"
 
-import "github.com/nickdavies/go-astar/astar"
+import "github.com/threadsoftware/go-astar/astar"
 
 func main () {
     rows := 3
