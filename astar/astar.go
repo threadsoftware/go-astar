@@ -1,7 +1,6 @@
 package astar
 
 import (
-	"log"
 	"math"
 	"sync"
 )
@@ -221,12 +220,10 @@ type PathPoint struct {
 // Manhattan distance NOT euclidean distance because in our routing we cant go diagonally between the points.
 // Attempting to add Diagonal distance.
 func (p Point) Dist(other Point) int {
-	da := float64(1)
 	db := math.Sqrt(2)
 	dx := math.Abs(float64(p.Row) - float64(other.Row))
 	dy := math.Abs(float64(p.Col) - float64(other.Col))
-	df := int(da*(dx+dy) + (db-2*da)*math.Min(dx, dy))
-	log.Printf("Final differential: %d", df)
+	df := int(1*(dx+dy) + (db-2*1)*math.Min(dx, dy))
 	return df
 	//return int(math.Abs(float64(p.Row-other.Row)) + math.Abs(float64(p.Col-other.Col)))
 }
