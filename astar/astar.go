@@ -1,6 +1,7 @@
 package astar
 
 import (
+	"log"
 	"math"
 	"sync"
 )
@@ -224,6 +225,8 @@ func (p Point) Dist(other Point) int {
 	db := math.Sqrt(2)
 	dx := math.Abs(float64(p.Row) - float64(other.Row))
 	dy := math.Abs(float64(p.Col) - float64(other.Col))
-	return int(da*(dx+dy) + (db-2*da)*math.Min(dx, dy))
+	df := int(da*(dx+dy) + (db-2*da)*math.Min(dx, dy))
+	log.Printf("Final differential: %d", df)
+	return df
 	//return int(math.Abs(float64(p.Row-other.Row)) + math.Abs(float64(p.Col-other.Col)))
 }
